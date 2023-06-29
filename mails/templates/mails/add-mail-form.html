@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Add A New Email Address To Your List</h1> 
+    <a href="{% url 'mails' %}"><img src="images/back-button.png" /></a>
+
+    <div class="card wide" >
+        <form method="post" action="">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input class="button" type="submit" title="Add Email">
+        </form>
+    </div>
+    
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Send Your Massage to The All of Your Contacts</h1> 
+    <a href="{% url 'mails' %}"><img src="images/back-button.png" /></a>
+
+    <div class="card wide" >
+        <form method="post" action="">
+            {% csrf_token %}
+            <label for="subject">Subject here</label>
+            <input type="text" name="subject">
+            <br>
+            <br>
+            <label for="massage">Massage here</label>
+            <textarea name="massage"></textarea>
+            <br>
+            <br>
+            <input class="button" type="submit" title="Add Email">
+        </form>
+
+    </div>
+</div>
+
+{% endblock content %}

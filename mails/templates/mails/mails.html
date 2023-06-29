@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="btn-container">
+    <a href="{% url 'add-email' %}" class="btn" >Add Email</a>
+
+    <a href="{% url 'send-email' %}" class="btn">Send Message</a>
+</div>
+
+<div class="container">
+    {% for mail in mails %}
+    <div class="card">
+        <h3>{{mail.name}}</h3>
+        <p>{{mail.address}}</p>
+        <div>
+            <a href="{% url 'update-email' mail.id %}" class="button"><span>Edit</span></a>
+            <a href="{% url 'delete-email' mail.id %}" class="button"><span>Delete</span></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

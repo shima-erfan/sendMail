@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+    
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sending Mass Emails!</title>
+
+    <style>
+        :root{
+            --darkblue  : #2b2d42;
+            --lightblue : #8d99ae;
+            --darkpink  : #d90429;
+            --lightpink : #ef233c;
+            --bgcolor   : #f8fcfd;
+            --bgcolor-dark   : #e5ebeb;
+            --txtcolor  : #000814;
+            
+        }
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #fff;
+        }
+
+        h1 {
+            color : var(--darkblue)
+        }
+
+        p {
+            color: var(--txtcolor)
+        }
+
+        div.card {
+            background: var(--bgcolor);
+            display: inline-block;
+            align-items: center;
+            gap: 2rem;
+            padding: 1rem;
+            margin: 1rem;
+            border-left: 5px solid var(--bgcolor-dark);
+            border-radius: 5px;
+            width: 33%;
+        }
+
+        div.wide {
+            width: 95%;
+        }
+
+        div.container {
+            padding: 1rem 3rem;
+            margin: 1rem;
+        }
+
+        .button {
+            background-color: var(--lightpink);
+            border: none;
+            border-radius: 10px;
+            margin: 2px;
+            padding: 5px;
+            text-decoration: none;
+            color: var(--bgcolor);
+            font-size: small;
+        }
+
+        div.btn-container {
+            margin: 2rem 1rem;
+        }
+
+        a.btn {
+            background-color: var(--darkpink);
+            color: var(--bgcolor);
+            border: none;
+            border-radius: 12px;
+            padding: 15px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a.btn:hover {
+            background-color: var(--darkblue);
+            color: var(--bgcolor);
+        }
+
+    
+    </style>
+</head>
+
+<body>
+    {% block content %}
+
+    {% endblock content %}
+</body>
